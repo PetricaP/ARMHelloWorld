@@ -37,8 +37,6 @@ void main() {
     SYS->RegLockAddr = 0;
 
     /* LCD Open */
-    //LCD_Open(LCD_C_TYPE, 4, LCD_BIAS_THIRD, LCD_FREQ_DIV64, LCD_CPVOl_3V);
-
     /* IP reset */
     SYS->IPRST_CTL2 |= SYS_IPRST_CTL2_LCD_RST_Msk;
     SYS->IPRST_CTL2 &= ~SYS_IPRST_CTL2_LCD_RST_Msk;
@@ -47,16 +45,51 @@ void main() {
     LCD->CTL &= ~LCD_CTL_EN_Msk;
 
     /* Turn everything off */
-    LCD->MEM_0 = u32SetValue;
-    LCD->MEM_1 = u32SetValue;
-    LCD->MEM_2 = u32SetValue;
-    LCD->MEM_3 = u32SetValue;
-    LCD->MEM_4 = u32SetValue;
-    LCD->MEM_5 = u32SetValue;
-    LCD->MEM_6 = u32SetValue;
-    LCD->MEM_7 = u32SetValue;
-    LCD->MEM_8 = u32SetValue;
+    LCD->MEM_0 = 0;
+    LCD->MEM_1 = 0;
+    LCD->MEM_2 = 0;
+    LCD->MEM_3 = 0;
+    LCD->MEM_4 = 0;
+    LCD->MEM_5 = 0;
+    LCD->MEM_6 = 0;
+    LCD->MEM_7 = 0;
+    LCD->MEM_8 = 0;
 
+    /* Wait a little bit for the values to sink */
+    if(CyclesPerUs > 0)
+        SysTick->LOAD = 300 * CyclesPerUs;
+    else
+        SysTick->LOAD = 15;
+    SysTick->VAL  =  (0x00);
+    /* Set the clock source to internal and enable ARM SysTick */
+    SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk | SysTick_CTRL_ENABLE_Msk;
+
+    /* Waiting for down-count to zero */
+    while((SysTick->CTRL & SysTick_CTRL_COUNTFLAG_Msk) == 0);
+
+    /* Configure LCD bias and enable charge pump */
+    // set internal source for charge pump
+    LCD->DISPCTL &= ~LCD_DISPCTL_BV_SEL_Msk;
+    // reset charge pump frequency to system clock
+    LCD->DISPCTL = LCD->DISPCTL & ~LCD_DISPCTL_CPUMP_FREQ_Msk;
+    // set churge pump voltage level to 3V
+    LCD->DISPCTL = LCD->DISPCTL & ~LCD_DISPCTL_CPUMP_VOL_SET_Msk | LCD_CPVOl_3V;
+    // disable bias reference ladder
+    LCD->DISPCTL &= ~LCD_DISPCTL_IBRL_EN_Msk;
+    // enable charge pump
+    LCD->DISPCTL |= LCD_DISPCTL_CPUMP_EN_Msk;
+
+    // Reset frame rate for LCD
+    LCD->CTL &= ~LCD_CTL_FREQ_Msk;
+    // Set the desired frame rate
+    LCD->CTL |= LCD_FREQ_DIV64;
+
+    // Set LCD mux according to the number of COMS we have
+    // In this case 4 COMS -> 1/4 duty
+    LCD->CTL = (LCD->CTL & ~LCD_CTL_MUX_Msk) | (3 << LCD_CTL_MUX_Pos);
+
+    // Set bias level to 1 / 3 bias
+    LCD->DISPCTL = LCD->DISPCTL & ~LCD_DISPCTL_BIAS_SEL_Msk | LCD_BIAS_THIRD;
 
 
     /* Enable LCD */
