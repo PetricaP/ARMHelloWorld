@@ -1,0 +1,13 @@
+"D:\Programs\IAR Systems\Embedded Workbench 8.3 ARM\arm\bin\armproc.dll" 
+
+"D:\Programs\IAR Systems\Embedded Workbench 8.3 ARM\arm\bin\Nu-Link\Nu-Link_IAR.dll" 
+
+"D:\Workspace\AC\SOC\ProiectSOC\Debug\Exe\ProiectSOC.out" 
+
+--plugin="D:\Programs\IAR Systems\Embedded Workbench 8.3 ARM\arm\bin\armbat.dll" 
+
+--flash_loader="D:\Programs\IAR Systems\Embedded Workbench 8.3 ARM\arm\config\flashloader\Nuvoton\Nano100_APROM.board" 
+
+
+
+

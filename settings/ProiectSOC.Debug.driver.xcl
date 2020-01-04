@@ -1,0 +1,17 @@
+"--endian=little" 
+
+"--cpu=Cortex-M0" 
+
+"--fpu=None" 
+
+"-p" 
+
+"D:\Programs\IAR Systems\Embedded Workbench 8.3 ARM\arm\CONFIG\debugger\Nuvoton\ionano100bn.ddf" 
+
+"--semihosting" 
+
+"--device=Nano100" 
+
+
+
+
