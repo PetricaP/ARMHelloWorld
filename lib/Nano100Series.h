@@ -11919,33 +11919,6 @@ typedef volatile unsigned long  vu32;       ///< Define 32-bit unsigned volatile
 }
 #endif
 
-
-/******************************************************************************/
-/*                         Peripheral header files                            */
-/******************************************************************************/
-#include "sys.h"
-#include "clk.h"
-#include "adc.h"
-#include "dac.h"
-#include "fmc.h"
-#include "ebi.h"
-#include "gpio.h"
-#include "i2c.h"
-#include "crc.h"
-#include "pdma.h"
-#include "pwm.h"
-#include "rtc.h"
-#include "sc.h"
-#include "scuart.h"
-#include "spi.h"
-#include "timer.h"
-#include "uart.h"
-#include "usbd.h"
-#include "wdt.h"
-#include "wwdt.h"
-#include "i2s.h"
-#include "lcd.h"
-
 #endif  // __NANO100SERIES_H__
 
 /*** (C) COPYRIGHT 2016 Nuvoton Technology Corp. ***/

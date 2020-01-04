@@ -2104,27 +2104,9 @@
         </settings>
     </configuration>
     <file>
-        <name>$PROJ_DIR$\lib\clk.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\lib\lcd.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\lib\LCDLIB.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\lib\LCDLIB_Panel.c</name>
+        <name>$PROJ_DIR$\lib\LCDPanel.c</name>
     </file>
     <file>
         <name>$PROJ_DIR$\main.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\lib\rtc.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\lib\sys.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\lib\system_Nano100Series.c</name>
     </file>
 </project>

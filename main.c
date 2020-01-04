@@ -1,7 +1,101 @@
 #include "lib/Nano100Series.h"
-#include "lib/LCDLIB.h"
+#include "lib/lcd.h"
 #include "lib/sys.h"
 #include "lib/rtc.h"
+#include "lib/clk.h"
+#include <string.h>
+
+
+typedef struct
+{
+    uint32_t Sub_Zone_Num;      /*!< Sub zone number */
+    uint32_t Zone_Digit_SegNum; /*!< Segment number */
+} ZoneInfo_TypeDef;
+
+
+extern char *Zone[];
+extern const ZoneInfo_TypeDef LCD_ZoneInfo[];
+extern const uint16_t *Zone_TextDisplay[];
+
+
+uint32_t CyclesPerUs      = (__HSI / 1000000);  /*!< Cycles per micro second */
+
+
+void LCD_SetPixel(uint32_t u32Com, uint32_t u32Seg, uint32_t u32OnFlag)
+{
+    int32_t memnum = u32Seg / 4;
+    int32_t seg_shift = 8*(u32Seg-(4*memnum));
+
+    volatile uint32_t *MEM_BASE = &LCD->MEM_0;
+    if(u32OnFlag)
+    {
+        *(MEM_BASE + memnum) |= (1 << u32Com) << seg_shift;
+    }
+    else
+    {
+        *(MEM_BASE + memnum) &= ~((1 << u32Com) << seg_shift);
+    }
+
+    if(CyclesPerUs > 0)
+        SysTick->LOAD = 300 * CyclesPerUs;
+    else
+        SysTick->LOAD = 15;
+    SysTick->VAL  =  (0x00);
+    SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk | SysTick_CTRL_ENABLE_Msk;
+
+    /* Waiting for down-count to zero */
+    while((SysTick->CTRL & SysTick_CTRL_COUNTFLAG_Msk) == 0);
+}
+
+
+void LCDLIB_Printf(uint32_t  u32Zone, char *string)
+{
+    int      data, length, index;
+    uint16_t bitfield;
+    uint32_t com, bit;
+    int      i;
+
+    length = strlen(string);
+    index  = 0;
+
+    /* fill out all characters on display */
+    for (index = 0; index < LCD_ZoneInfo[u32Zone].Sub_Zone_Num; index++)
+    {
+        if (index < length)
+        {
+            data = (int) *string;
+        }
+        else           /* padding with space */
+        {
+            data = 0x20; /* SPACE */
+        }
+        /* defined letters currently starts at "SPACE" - 0x20; */
+        data     = data - 0x20;
+        bitfield = *(Zone_TextDisplay[u32Zone] + data);
+
+        for (i = 0; i < LCD_ZoneInfo[u32Zone].Zone_Digit_SegNum; i++)
+        {
+            bit = *(Zone[u32Zone]
+                    + index*LCD_ZoneInfo[u32Zone].Zone_Digit_SegNum*2
+                    + i*2 + 1);
+
+            com = *(Zone[u32Zone]
+                    + index*LCD_ZoneInfo[u32Zone].Zone_Digit_SegNum*2
+                    + i*2 + 0);
+
+            LCD_SetPixel(com, bit, 0);
+
+            if (bitfield & (1 << i))
+            {
+                /* Turn on segment */
+                LCD_SetPixel(com, bit, 1);
+            }
+        }
+        string++;
+    }
+
+}
+
 
 void main() {
     /* Unlock protected registers */

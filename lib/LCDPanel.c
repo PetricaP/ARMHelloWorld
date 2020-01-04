@@ -17,7 +17,13 @@
 #include <string.h>
 #include <stdint.h>
 
-#include "LCDLIB.h"
+
+typedef struct
+{
+    uint32_t Sub_Zone_Num;      /*!< Sub zone number */
+    uint32_t Zone_Digit_SegNum; /*!< Segment number */
+} ZoneInfo_TypeDef;
+
 
 #define sub_Zone0 7
 #define Zone0_Digit_SegNum 14
