@@ -2370,6 +2370,9 @@
         </settings>
     </configuration>
     <file>
+        <name>$PROJ_DIR$\LCD_SetPixel.s</name>
+    </file>
+    <file>
         <name>$PROJ_DIR$\lib\LCDPanel.c</name>
     </file>
     <file>

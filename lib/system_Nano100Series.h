@@ -29,23 +29,6 @@ extern "C" {
 #define __HIRC        __HIRC12M
 #define __HSI         (__HIRC12M)      /* Factory Default is internal 12MHz */
 
-
-extern uint32_t SystemCoreClock;        /*!< System Clock Frequency (Core Clock) */
-extern uint32_t CyclesPerUs;            /*!< Cycles per micro second */
-
-/**
- * Update SystemCoreClock variable
- *
- * @param  None
- * @return None
- *
- * @brief  Updates the SystemCoreClock with current core Clock
- *         retrieved from CPU registers.
- */
-
-extern void SystemCoreClockUpdate (void);
-extern uint32_t SysGet_PLLClockFreq(void);
-
 #ifdef __cplusplus
 }
 #endif
