@@ -203,10 +203,6 @@
             <name>$PROJ_DIR$\main.c</name>
             <outputs>
                 <tool>
-                    <name>ICCARM</name>
-                    <file> 49 50 60</file>
-                </tool>
-                <tool>
                     <name>BICOMP</name>
                     <file> 56</file>
                 </tool>
@@ -218,7 +214,7 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 68 66 67 43 38 41 42 36 39 37 45 40 35 85 77 83 84 30 24 26</file>
+                    <file> 68 66 67 43 38 41 42 36 39 37 45 40</file>
                 </tool>
             </inputs>
         </file>
