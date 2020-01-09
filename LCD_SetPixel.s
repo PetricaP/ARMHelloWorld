@@ -1,5 +1,3 @@
-        #define SHT_PROGBITS 0x1
-
         PUBLIC LCD_SetPixel
 
 ;; Nuvoton130 has a Cortex-m0, ARM v6-m, Supports only THUMB instructions

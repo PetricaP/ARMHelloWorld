@@ -11,45 +11,70 @@ void LCD_SetPixel(uint32_t u32Com, uint32_t u32Seg, uint32_t u32OnFlag);
 
 void LCD_PrintString(uint32_t  u32Zone, char *string)
 {
+    /*
+        All the LCD segments are turned on by setting the corresponding COM
+        and the corresponding segment.
+
+        The segment data is divided into 3 zones, each one of them having
+        multiple subzones.
+
+        The subzones contain multiple segment data structs which contain
+        the corresponding com number and segment number
+    */
     int      data, length, index;
     uint16_t bitfield;
     uint32_t com, bit;
+    const char *segment_offset;
+
     int      i;
 
     length = strlen(string);
     index  = 0;
 
-    /* fill out all characters on display */
+    /* LCD_ZoneInfo is an array containing pointers to the starts of the 3 zones */
+
+    /* Sub_Zone_Num is the number of characters which can be displayed in that zone */
     for (index = 0; index < LCD_ZoneInfo[u32Zone].Sub_Zone_Num; index++)
     {
         if (index < length)
         {
             data = (int) *string;
         }
-        else           /* padding with space */
+        else
         {
+            /* If the string's length is less than the number of the characters
+               which can be displayed, we pad it with ' ' */
             data = 0x20; /* SPACE */
         }
-        /* defined letters currently starts at "SPACE" - 0x20; */
-        data     = data - 0x20;
+        /* defined letters currently start at "SPACE" - 0x20; */
+        data = data - 0x20;
+
+        /* Zone_TextDisplay contains bitmasks which represent which bits must
+           be turned on in order to display a particular character.
+           To get the specific bitfield we jump to the beginning + data */
         bitfield = *(Zone_TextDisplay[u32Zone] + data);
 
+        /* We go through all the seg data and set only turn on the segments
+           specified by bitfield */
         for (i = 0; i < LCD_ZoneInfo[u32Zone].Zone_Digit_SegNum; i++)
         {
-            bit = *(Zone[u32Zone]
-                    + index*LCD_ZoneInfo[u32Zone].Zone_Digit_SegNum*2
-                    + i*2 + 1);
+            /* Zone[u32Zone] -> the pointer to the start of the zone
+               index * LCD_ZoneInfo[u32Zone].Zone_Digit_SegNum * 2-> offset to the start
+               of the data for the specific segnum
+               i * 2 -> offset to the current seg / com pair */
+            segment_offset = Zone[u32Zone]
+                    + index * LCD_ZoneInfo[u32Zone].Zone_Digit_SegNum * 2
+                    + i * 2;
+            bit = *(segment_offset + 1);
 
-            com = *(Zone[u32Zone]
-                    + index*LCD_ZoneInfo[u32Zone].Zone_Digit_SegNum*2
-                    + i*2 + 0);
+            com = *segment_offset;
 
-            LCD_SetPixel(com, bit, 0);
-
+            /* Check if this segment should be turned on */
             if (bitfield & (1 << i))
             {
-                /* Turn on segment */
                 LCD_SetPixel(com, bit, 1);
+            } else {
+                LCD_SetPixel(com, bit, 0);
             }
         }
         string++;
@@ -57,7 +82,7 @@ void LCD_PrintString(uint32_t  u32Zone, char *string)
 }
 
 
-static inline void LCD_Init() {
+ void LCD_Init() {
     /* Unlock protected registers */
     while(SYS->RegLockAddr != SYS_RegLockAddr_RegUnLock_Msk) {
         SYS->RegLockAddr = 0x59;
@@ -67,10 +92,12 @@ static inline void LCD_Init() {
 
     /* Select IP clock source */
     CLK->CLKSEL1 &= ~CLK_CLKSEL1_UART_S_Msk;
-    CLK->CLKSEL1 |= (0x0 << CLK_CLKSEL1_UART_S_Pos);// Clock source from external 12 MHz or 32 KHz crystal clock
+    // Clock source from external 12 MHz or 32 KHz crystal clock
+    CLK->CLKSEL1 |= (0x0 << CLK_CLKSEL1_UART_S_Pos);
 
+    // Clock source from external 12 MHz or 32 KHz crystal clock
     CLK->CLKSEL1 &= ~CLK_CLKSEL1_LCD_S_Msk;
-    CLK->CLKSEL1 |= (0x0 << CLK_CLKSEL1_LCD_S_LXT);// Clock source from external 12 MHz or 32 KHz crystal clock
+    CLK->CLKSEL1 |= (0x0 << CLK_CLKSEL1_LCD_S_LXT);
 
     /* Enable IP clock */
     CLK->APBCLK |= CLK_APBCLK_LCD_EN;
