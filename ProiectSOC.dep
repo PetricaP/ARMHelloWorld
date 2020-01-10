@@ -5,296 +5,149 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\lib\i2s.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
-            <file>$PROJ_DIR$\lib\lcd.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\LCDPanel.o</file>
+            <file>$PROJ_DIR$\..\Nano100B_Series_BSP_CMSIS_v3.03.000\SampleCode\NUTINY-EVB-NANO130\LCD_DEMO\main.c</file>
+            <file>$PROJ_DIR$\Debug\List\rtc.lst</file>
             <file>$PROJ_DIR$\lib\clk.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\LCDLIB_Panel.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\Debug\List\LCDPanel.lst</file>
             <file>$PROJ_DIR$\Debug\Obj\LCDPanel.xcl</file>
-            <file>$PROJ_DIR$\lib\core_cmInstr.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.xcl</file>
             <file>$PROJ_DIR$\Debug\List\ProiectSOC.log</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
-            <file>$PROJ_DIR$\Debug\Exe\ProiectSOC.out</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
-            <file>$PROJ_DIR$\lib\core_cm0.h</file>
-            <file>$PROJ_DIR$\Debug\List\lcd.s</file>
-            <file>$PROJ_DIR$\Debug\List\LCDLIB.s</file>
-            <file>$PROJ_DIR$\Debug\Obj\lcd.o</file>
-            <file>$PROJ_DIR$\lib\rtc.h</file>
-            <file>$PROJ_DIR$\lib\wwdt.h</file>
-            <file>$PROJ_DIR$\lib\crc.h</file>
-            <file>$PROJ_DIR$\Debug\List\LCD_SetPixel.lst</file>
-            <file>$PROJ_DIR$\lib\usbd.h</file>
-            <file>$PROJ_DIR$\lib\Nano100Series.h</file>
-            <file>$PROJ_DIR$\lib\pwm.h</file>
-            <file>$PROJ_DIR$\lib\system_Nano100Series.h</file>
-            <file>$PROJ_DIR$\Debug\List\ProiectSOC.map</file>
-            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
-            <file>$PROJ_DIR$\lib\wdt.h</file>
-            <file>$PROJ_DIR$\main.s</file>
+            <file>$PROJ_DIR$\Debug\Obj\sys.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\LCDPanel.o</file>
+            <file>$PROJ_DIR$\lib\ebi.h</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
             <file>$PROJ_DIR$\lib\sys.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\LCDLIB.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\LCD_SetPixel.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\lib\dl6M_tln.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\LCDLIB_Panel.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\List\LCDPanel.s</file>
+            <file>$PROJ_DIR$\lib\rtc.c</file>
+            <file>$PROJ_DIR$\Debug\List\LCD_SetPixel.lst</file>
+            <file>$PROJ_DIR$\Debug\List\LCDLIB.lst</file>
+            <file>$PROJ_DIR$\lib\clk.c</file>
+            <file>$PROJ_DIR$\LCD_SetPixel.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\rtc.__cstat.et</file>
+            <file>$PROJ_DIR$\lib\core_cmFunc.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+            <file>$PROJ_DIR$\lib\lcd.h</file>
+            <file>$PROJ_DIR$\lib\pdma.h</file>
+            <file>$PROJ_DIR$\Debug\List\clk.lst</file>
+            <file>$PROJ_DIR$\lib\scuart.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\lcd.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_Nano100Series.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\rtc.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\LCD_SetPixel.o</file>
+            <file>$PROJ_DIR$\Debug\List\LCDLIB_Panel.s</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\rtc.o</file>
+            <file>$PROJ_DIR$\lib\i2s.h</file>
+            <file>$PROJ_DIR$\Debug\List\system_Nano100Series.lst</file>
+            <file>$PROJ_DIR$\lib\core_cmInstr.h</file>
+            <file>$PROJ_DIR$\lib\lcd.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+            <file>$PROJ_DIR$\lib\timer.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\LCDPanel.__cstat.et</file>
+            <file>$PROJ_DIR$\lib\wwdt.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\clk.o</file>
+            <file>$PROJ_DIR$\lib\dac.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_Nano100Series.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\List\clk.s</file>
             <file>$TOOLKIT_DIR$\lib\rt6M_tl.a</file>
+            <file>$PROJ_DIR$\lib\adc.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\LCDLIB.xcl</file>
+            <file>$PROJ_DIR$\Debug\List\LCD_SetPixel.s</file>
+            <file>$PROJ_DIR$\lib\wdt.h</file>
+            <file>$PROJ_DIR$\Debug\List\rtc.s</file>
+            <file>$PROJ_DIR$\lib\LCDLIB.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+            <file>$PROJ_DIR$\Debug\List\main.s</file>
+            <file>$PROJ_DIR$\lib\fmc.h</file>
+            <file>$PROJ_DIR$\lib\Nano100Series.h</file>
+            <file>$PROJ_DIR$\lib\usbd.h</file>
+            <file>$PROJ_DIR$\lib\LCDLIB_Panel.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\LCDLIB.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$PROJ_DIR$\lib\system_Nano100Series.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\lcd.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\LCDLIB_Panel.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\LCD_SetPixel.xcl</file>
+            <file>$PROJ_DIR$\Debug\List\sys.lst</file>
+            <file>$PROJ_DIR$\Debug\Obj\clk.xcl</file>
             <file>$PROJ_DIR$\LCD_SetPixel.s</file>
             <file>$PROJ_DIR$\lib\LCDPanel.c</file>
             <file>$PROJ_DIR$\main.c</file>
-            <file>$PROJ_DIR$\lib\spi.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
             <file>$PROJ_DIR$\Debug\Obj\sys.__cstat.et</file>
-            <file>$PROJ_DIR$\lib\LCDLIB_Panel.c</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$PROJ_DIR$\main.s</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\lib\spi.h</file>
+            <file>$PROJ_DIR$\lib\crc.h</file>
+            <file>$PROJ_DIR$\lib\core_cm0.h</file>
+            <file>$PROJ_DIR$\Debug\Exe\ProiectSOC.out</file>
             <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
-            <file>$PROJ_DIR$\lib\LCDLIB.h</file>
-            <file>$TOOLKIT_DIR$\config\generic_cortex.icf</file>
-            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\LCDLIB_Panel.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\ProiectSOC.pbd</file>
-            <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
-            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
-            <file>$PROJ_DIR$\Debug\List\main.lst</file>
-            <file>$PROJ_DIR$\Debug\Obj\clk.o</file>
-            <file>$PROJ_DIR$\lib\system_Nano100Series.c</file>
-            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
-            <file>$PROJ_DIR$\lib\sys.c</file>
-            <file>$PROJ_DIR$\Debug\Obj\system_Nano100Series.__cstat.et</file>
-            <file>$TOOLKIT_DIR$\lib\m6M_tl.a</file>
-            <file>$PROJ_DIR$\lib\uart.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\LCDLIB.xcl</file>
-            <file>$PROJ_DIR$\lib\gpio.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\clk.xcl</file>
-            <file>$PROJ_DIR$\lib\core_cmFunc.h</file>
-            <file>$PROJ_DIR$\Debug\List\main.s</file>
-            <file>$PROJ_DIR$\lib\LCDLIB.c</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-            <file>$PROJ_DIR$\LCD.h</file>
-            <file>$TOOLKIT_DIR$\lib\dl6M_tln.a</file>
-            <file>$PROJ_DIR$\lib\i2c.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\clk.__cstat.et</file>
-            <file>$PROJ_DIR$\Debug\List\LCDLIB_Panel.lst</file>
             <file>$PROJ_DIR$\Debug\List\sys.s</file>
-            <file>$PROJ_DIR$\Debug\List\sys.lst</file>
-            <file>$PROJ_DIR$\Debug\Obj\LCDPanel.__cstat.et</file>
-            <file>$PROJ_DIR$\lib\dac.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\LCD_SetPixel.__cstat.et</file>
-            <file>$PROJ_DIR$\Debug\List\LCD_SetPixel.s</file>
-            <file>$PROJ_DIR$\Debug\Obj\LCDLIB.__cstat.et</file>
-            <file>$PROJ_DIR$\lib\adc.h</file>
-            <file>$PROJ_DIR$\lib\sc.h</file>
-            <file>$PROJ_DIR$\lib\clk.c</file>
-            <file>$PROJ_DIR$\lib\ebi.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\lcd.__cstat.et</file>
-            <file>$PROJ_DIR$\lib\timer.h</file>
-            <file>$PROJ_DIR$\lib\pdma.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\rtc.__cstat.et</file>
-            <file>$PROJ_DIR$\Debug\Obj\system_Nano100Series.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\LCD_SetPixel.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\LCDLIB_Panel.__cstat.et</file>
-            <file>$PROJ_DIR$\Debug\List\rtc.lst</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\LCDLIB_Panel.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\sys.o</file>
-            <file>$PROJ_DIR$\lib\scuart.h</file>
-            <file>$PROJ_DIR$\Debug\List\system_Nano100Series.lst</file>
-            <file>$PROJ_DIR$\lib\fmc.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\lcd.xcl</file>
+            <file>$PROJ_DIR$\lib\LCDLIB.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
+            <file>$PROJ_DIR$\lib\sys.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
+            <file>$TOOLKIT_DIR$\lib\m6M_tl.a</file>
+            <file>$PROJ_DIR$\Debug\List\LCDLIB_Panel.lst</file>
+            <file>$PROJ_DIR$\Debug\List\ProiectSOC.map</file>
+            <file>$PROJ_DIR$\lib\i2c.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\ProiectSOC.pbd</file>
+            <file>$PROJ_DIR$\lib\pwm.h</file>
+            <file>$PROJ_DIR$\lib\gpio.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
             <file>$PROJ_DIR$\Debug\Obj\sys.xcl</file>
-            <file>$PROJ_DIR$\Debug\List\LCDLIB_Panel.s</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
-            <file>$PROJ_DIR$\Debug\List\clk.s</file>
-            <file>$PROJ_DIR$\lib\lcd.c</file>
-            <file>$PROJ_DIR$\Debug\List\LCDPanel.lst</file>
-            <file>$PROJ_DIR$\Debug\List\rtc.s</file>
-            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-            <file>$PROJ_DIR$\lib\rtc.c</file>
-            <file>$PROJ_DIR$\Debug\Obj\LCD_SetPixel.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\lib\uart.h</file>
+            <file>$PROJ_DIR$\lib\system_Nano100Series.h</file>
+            <file>$TOOLKIT_DIR$\config\generic_cortex.icf</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\lcd.o</file>
             <file>$PROJ_DIR$\Debug\List\lcd.lst</file>
-            <file>$PROJ_DIR$\Debug\List\LCDPanel.s</file>
-            <file>$PROJ_DIR$\LCD_SetPixel.c</file>
-            <file>$PROJ_DIR$\Debug\Obj\rtc.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\rtc.o</file>
-            <file>$PROJ_DIR$\Debug\List\LCDLIB.lst</file>
-            <file>$PROJ_DIR$\Debug\List\clk.lst</file>
+            <file>$PROJ_DIR$\Debug\Obj\clk.__cstat.et</file>
+            <file>$PROJ_DIR$\lib\rtc.h</file>
+            <file>$PROJ_DIR$\lib\sc.h</file>
+            <file>$PROJ_DIR$\LCD.h</file>
+            <file>$PROJ_DIR$\Debug\List\LCDLIB.s</file>
+            <file>$PROJ_DIR$\Debug\List\main.lst</file>
+            <file>$PROJ_DIR$\Debug\Obj\LCDLIB.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\List\lcd.s</file>
         </outputs>
         <file>
             <name>[ROOT_NODE]</name>
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 10 24 8</file>
+                    <file> 82 91 7</file>
                 </tool>
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\Debug\Exe\ProiectSOC.out</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 24 8</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 43 104 3 9 48 31 55 65</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\main.s</name>
-            <outputs>
-                <tool>
-                    <name>AARM</name>
-                    <file> 9</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\LCD_SetPixel.s</name>
-            <outputs>
-                <tool>
-                    <name>AARM</name>
-                    <file> 104 19</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\lib\LCDPanel.c</name>
+            <name>$PROJ_DIR$\lib\rtc.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 106 100 3</file>
+                    <file> 57 1 37</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 71</file>
+                    <file> 23</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 5</file>
+                    <file> 33</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 97 44 36 63 41 1 102 40 39 52 88 30</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\main.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 61 49 9</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 11</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 7</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 64 21 12 30 44 36 63 41 1 6 47 25 60 23 2 28 16 4 52 102 88</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\lib\LCDLIB_Panel.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 96 68 89</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 86</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 45</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 97 44 36 63 41 1 102 40 39 52 88 30 42</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\lib\system_Nano100Series.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 92</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 54</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 84</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 30 44 36 63 41 1 21 12 6 47 25 60 23</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\lib\sys.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 69 70 90</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 37</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 95</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 21 12 30 44 36 63 41 1 6 47 25 60 23</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\lib\LCDLIB.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 14 110 29</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 75</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 57</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 97 44 36 63 41 1 102 40 39 52 88 30 21 12 6 47 25 60 23 28 4 76 72 93 79 58 66 18 82 22 16 77 91 35 81 56 20 26 17 0 2 42</file>
+                    <file> 36 98 102 66 83 4 47 62 81 78 40 42 88 24 100 106</file>
                 </tool>
             </inputs>
         </file>
@@ -303,67 +156,21 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 98 111 50</file>
+                    <file> 51 28 48</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 67</file>
+                    <file> 105</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 59</file>
+                    <file> 72</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 21 12 30 44 36 63 41 1 6 47 25 60 23 4</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\lib\lcd.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 13 105 15</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 80</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 94</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 97 44 36 63 41 1 102 52 88 40 39 21 12 30 6 47 25 60 23 28 4 76 72 93 79 58 66 18 82 22 16 77 91 35 81 56 20 26 17 0 2</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\lib\rtc.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 101 87 109</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 83</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 108</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 97 44 36 63 41 1 102 21 12 30 6 47 25 60 23 16</file>
+                    <file> 62 81 78 98 102 66 83 4 40 42 88 24 100 2</file>
                 </tool>
             </inputs>
         </file>
@@ -372,21 +179,215 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 74 19 104</file>
+                    <file> 55 19 34</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 73</file>
+                    <file> 13</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 85</file>
+                    <file> 70</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 64 21 12 30 44 36 63 41 1 6 47 25 60 23 2 28 16 4</file>
+                    <file> 108 62 81 78 98 102 66 83 4 40 42 88 24 100 26 12 106 2</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\lib\lcd.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 112 104 103</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 68</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 30</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 36 98 102 66 83 4 47 59 46 96 86 62 81 78 40 42 88 24 100 12 2 53 49 61 10 95 92 80 27 94 106 107 29 79 43 99 63 56 45 38 26</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\lib\LCDLIB.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 109 20 65</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 111</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 54</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 36 98 102 66 83 4 47 96 86 59 46 78 62 81 40 42 88 24 100 12 2 53 49 61 10 95 92 80 27 94 106 107 29 79 43 99 63 56 45 38 26 85</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\lib\LCDLIB_Panel.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 35 90 3</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 16</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 69</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 36 98 102 66 83 4 47 96 86 59 46 78 85</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\lib\system_Nano100Series.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 39</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 50</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 32</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 78 98 102 66 83 4 62 81 40 42 88 24 100</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\LCD_SetPixel.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 34 19</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\lib\LCDPanel.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 17 5 9</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 44</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 6</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 36 98 102 66 83 4 47 96 86 59 46 78</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 60 110 15</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 25</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 31</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 108 62 81 78 98 102 66 83 4 40 42 88 24 100 26 12 106 2 59 47 46</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\main.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 15</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\ProiectSOC.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 91 7</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 101 34 9 15 11 52 89 14</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\lib\sys.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 84 71 8</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 76</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 97</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 62 81 78 98 102 66 83 4 40 42 88 24 100</file>
                 </tool>
             </inputs>
         </file>

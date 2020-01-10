@@ -90,16 +90,11 @@ void LCD_PrintString(uint32_t  u32Zone, char *string)
         SYS->RegLockAddr = 0x88;
     }
 
-    /* Select IP clock source */
-    CLK->CLKSEL1 &= ~CLK_CLKSEL1_UART_S_Msk;
-    // Clock source from external 12 MHz or 32 KHz crystal clock
-    CLK->CLKSEL1 |= (0x0 << CLK_CLKSEL1_UART_S_Pos);
-
-    // Clock source from external 12 MHz or 32 KHz crystal clock
+    /* Clock source from external 12 MHz or 32 KHz crystal clock */
     CLK->CLKSEL1 &= ~CLK_CLKSEL1_LCD_S_Msk;
     CLK->CLKSEL1 |= (0x0 << CLK_CLKSEL1_LCD_S_LXT);
 
-    /* Enable IP clock */
+    /* Enable clock on APB */
     CLK->APBCLK |= CLK_APBCLK_LCD_EN;
 
     /* Select LCD COMs, SEGs, V1 ~ V3, DH1, DH2 */
@@ -117,8 +112,6 @@ void LCD_PrintString(uint32_t  u32Zone, char *string)
     /* Lock protected registers */
     SYS->RegLockAddr = 0;
 
-
-    /* IP reset */
     SYS->IPRST_CTL2 |= SYS_IPRST_CTL2_LCD_RST_Msk;
     SYS->IPRST_CTL2 &= ~SYS_IPRST_CTL2_LCD_RST_Msk;
 
@@ -178,6 +171,13 @@ void LCD_PrintString(uint32_t  u32Zone, char *string)
 void main() {
     LCD_Init();
 
-    LCD_PrintString(0, "SOC2019");
+    LCD_PrintString(0, "CRISTI!");
+
+    char bit = *(Zone[2] + 27 * 2 + 1);
+
+    char com = *(Zone[2] + 27 * 2 + 0);
+
+    LCD_SetPixel(com, bit, 1); /* Turn on segment */
+
     while(1);
 }
